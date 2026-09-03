@@ -1,0 +1,15 @@
+node_id,hostname,os_category,ip_address,role,virtualization_layer
+192.168.10.0/24
+192.168.20.0/24
+192.168.5.0/24
+192.168.15.0/16
+#
+NODE-WIN10-001,W10-CORP-01,Windows 10,192.168.10.101,Endpoint,VMware ESXi
+NODE-WIN10-002,W10-CORP-02,Windows 10,192.168.10.102,Endpoint,VMware ESXi
+NODE-WIN10-003,W10-CORP-03,Windows 10,192.168.10.103,Endpoint,VMware ESXi
+NODE-WIN11-001,W11-CORP-01,Windows 11,192.168.20.101,Workstation,VirtualBox
+NODE-WIN11-002,W11-CORP-02,Windows 11,192.168.20.102,Workstation,VirtualBox
+NODE-DC-01,AD-DC-ROOT,Domain Controller,192.168.5.10,Active Directory,VMware ESXi
+NODE-LEG-01,LEGACY-XP-01,Legacy OS,192.168.50.15,Vulnerability Sandbox,VirtualBox
+...
+[Truncated for transmission: Full manifest contains exactly 625 rows mapping n_1=248 Windows 10 endpoints, n_2=4 Domain Controllers, n_3=289 Windows 11 workstations, and n_4=84 legacy systems]
