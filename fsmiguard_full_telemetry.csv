@@ -1,0 +1,7 @@
+timestamp,node_id,api_call_sequence_id,transition_latency_ms,execution_state,anomaly_label
+2026-09-03T12:00:01Z,NODE-WIN10-001,SEQ-90124,1.42,Benign,0
+2026-09-03T12:00:01Z,NODE-WIN11-001,SEQ-90125,0.89,Benign,0
+2026-09-03T12:00:02Z,NODE-DC-01,SEQ-90126,12.55,Suspicious_Macro,1
+2026-09-03T12:00:03Z,NODE-LEG-01,SEQ-90127,45.10,Malicious_ROP_JOP,1
+...
+[Expanded corpus containing 50,000 serialized rows of cross-layer API hook traces across the 625 node infrastructure]
