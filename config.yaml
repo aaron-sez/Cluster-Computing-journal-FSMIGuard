@@ -1,0 +1,46 @@
+testbed:
+  name: "FSMIGuard-Enterprise-Testbed"
+  total_nodes: 625
+  node_distribution:
+    windows_10_endpoints:
+      count: 248
+      role: "Standard corporate user endpoints"
+      virtualization: "VMware ESXi"
+    windows_11_workstations:
+      count: 289
+      role: "High-performance security-enabled workstations"
+      virtualization: "VirtualBox"
+    domain_controllers:
+      count: 4
+      role: "Active Directory and identity management"
+      virtualization: "VMware ESXi"
+    legacy_os:
+      count: 84
+      role: "Vulnerability sandbox (Windows 7/8/XP)"
+      virtualization: "VirtualBox"
+  network:
+    hypervisor_environment: "Hybrid VMware ESXi / VirtualBox Bridged Cluster"
+    attacker_node: "Kali Linux 2024.3 (Isolated Segment)"
+
+model:
+  architecture: "TransformerEncoder"
+  layers: 6
+  d_model: 512
+  n_heads: 8
+  vocab_size: 2500
+  max_seq_length: 512
+
+gmm:
+  components: 4
+  covariance_type: "full"
+  threshold_multiplier: 2.5
+
+training:
+  batch_size: 128
+  epochs: 50
+  learning_rate: 0.0001
+  weight_decay: 0.01
+  data_split:
+    train: 0.70
+    validation: 0.15
+    test: 0.15
